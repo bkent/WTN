@@ -42,9 +42,9 @@
                 <p class="light">All recordings and listener equipment are supplied FREE to visually impaired people.</p>
                 <p class="light">We also provide FREE bi-monthly magazines and offer FREE loans of talking books from an extensive in-house library.</p>
                 <p class="light">If you know of anyone who would benefit from this service please <a href="contact.html">contact us</a>.</p>
-                <div class="row center">
+                <!-- <div class="row center hide-on-med-and-up">
                   <a href="gallery" id="download-button" class="btn-large waves-effect waves-light light-blue">Photo Gallery</a>
-                </div>                
+                </div> -->            
               </div>
               <div class="col s12 m6">
                 <img class="responsive-img" src="img/DSCF4495.JPG">

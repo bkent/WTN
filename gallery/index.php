@@ -122,6 +122,25 @@
 		<![endif]-->
 	<![endif]-->
 	<!-- END SCRIPTS/STYLESHEETS FOR IE PC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>    
+    nav ul li a{ color: black; }    
+  </style>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-76948958-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <?php include "../headerfooter.php"; ?>
 </head>
 
 <body>
@@ -132,6 +151,9 @@
 			include("add_header.php");
 		}
 	?>
+	<?php ShowHeader("gallery"); ?>
+	
+	<br/><br/>
 	
 	<div id="global_container">
 	
@@ -275,7 +297,7 @@
 			
 		}
 	?>
-	
+		
 	<?php
 		/**** DEBUG INFO ****/
 		if ($settings['gallery_debug']) {

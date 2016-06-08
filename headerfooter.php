@@ -2,55 +2,67 @@
 
 function ShowHeader($active) 
 {
-    switch($active)
+  $dotdotslash = "";
+  $dotslash = "./";
+  
+  switch($active)
 	{
 		case "index":
 			$index =  'class="active"';
         break;
-        case "listen":
+    case "listen":
 			$listen =  'class="active"';
         break;
-        case "loans":
+    case "loans":
 			$loans =  'class="active"';
         break;
-        case "volunteer":
+    case "volunteer":
 			$volunteer =  'class="active"';
         break;
-        case "news":
+    case "news":
 			$news =  'class="active"';
         break;
-        case "news":
+    case "news":
 			$news =  'class="active"';
         break;
-        case "about":
-			$news =  'class="active"';
+    case "about":
+			$about =  'class="active"';
         break;
-        case "info":
+    case "info":
 			$info =  'class="active"';
-        break;		
+        break;
+    case "contact":
+			$contact =  'class="active"';
+        break;	
+    case "gallery":
+			$gallery = 'class="active"';
+      $dotdotslash = "../";
+        break;	
 	}
 		
 	echo '<nav class="yellow accent-2" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img src="img/wtn_logo.png" height="55px" /></a>
+    <div class="nav-wrapper container"><a id="logo-container" href="'. $dotdotslash .'index.php" class="brand-logo"><img src="'. $dotdotslash .'img/wtn_logo.png" height="55px" /></a>
       <ul class="right hide-on-med-and-down">
-        <li '. $index .'><a href="index.php">Home</a></li>
-        <li '. $listen .'><a href="listen.php">Listen</a></li>
-        <li '. $loans .'><a href="loans.php">Talking Book Loans</a></li>
-        <li '. $volunteer .'><a href="volunteer.php">Volunteer</a></li>
-        <li '. $news .'><a href="news.php">News</a></li>
-        <li '. $about .'><a href="about.php">About</a></li>
-        <li '. $info .'><a href="info.php">Information</a></li>
-        <li '. $contact .'><a href="contact.php">Contact</a></li>
+        <li '. $index .'><a href="'. $dotdotslash .'index.php">Home</a></li>
+        <li '. $listen .'><a href="'. $dotdotslash .'listen.php">Listen</a></li>
+        <li '. $loans .'><a href="'. $dotdotslash .'loans.php">Talking Book Loans</a></li>
+        <li '. $volunteer .'><a href="'. $dotdotslash .'volunteer.php">Volunteer</a></li>
+        <li '. $news .'><a href="'. $dotdotslash .'news.php">News</a></li>
+        <li '. $about .'><a href="'. $dotdotslash .'about.php">About</a></li>
+        <li '. $info .'><a href="'. $dotdotslash .'info.php">Information</a></li>
+        <li '. $gallery .'><a href="'. $dotdotslash . $dotslash . 'gallery">Gallery</a></li>
+        <li '. $contact .'><a href="'. $dotdotslash .'contact.php">Contact</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li '. $index .'><a href="index.php">Home</a></li>
-        <li '. $listen .'><a href="listen.php">Listen</a></li>
-        <li '. $loans .'><a href="loans.php">Talking Book Loans</a></li>
-        <li '. $volunteer .'><a href="volunteer.php">Volunteer</a></li>
-        <li '. $news .'><a href="news.php">News</a></li>
-        <li '. $about .'><a href="about.php">About</a></li>
-        <li '. $info .'><a href="info.php">Information</a></li>
+        <li '. $index .'><a href="'. $dotdotslash .'index.php">Home</a></li>
+        <li '. $listen .'><a href="'. $dotdotslash .'listen.php">Listen</a></li>
+        <li '. $loans .'><a href="'. $dotdotslash .'loans.php">Talking Book Loans</a></li>
+        <li '. $volunteer .'><a href="'. $dotdotslash .'volunteer.php">Volunteer</a></li>
+        <li '. $news .'><a href="'. $dotdotslash .'news.php">News</a></li>
+        <li '. $about .'><a href="'. $dotdotslash .'about.php">About</a></li>
+        <li '. $info .'><a href="'. $dotdotslash .'info.php">Information</a></li>
+        <li '. $gallery .'><a href="'. $dotdotslash . $dotslash .'gallery">Gallery</a></li>
         <li '. $contact .'><a href="contact.php">Contact</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
