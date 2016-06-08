@@ -24,53 +24,25 @@
   <?php include "headerfooter.php"; ?>
 </head>
 <body>
-  <?php ShowHeader("contact"); ?>
+  <?php ShowHeader("news"); ?>
 
   <div class="container">
     <div class="section">
-      <?php
-          include "dbfuncs.php";
-          $q = $_GET["q"];
-          $t = $_GET["t"];
-          $a = $_GET["a"];
-          if (isset($_GET["q"]))
-          {
-            $msg = "Request to borrow talking book, Catalogue No: $q ($t, by $a)";
-          }
-          else
-          {
-            $msg= "";
-          }
-      ?>
 
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m12">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">hearing</i></h2>
-            <h5 class="center">Contact</h5>
-            <form  method='post' action='sendmail.php'>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" name="email" class="validate">
-                  <label for="email">Email</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" name="message" class="materialize-textarea"><?php echo "$msg"; ?></textarea>
-                  <label for="textarea1">Message</label>
-                </div>
-              </div>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button>
-            </form>
+
+            <div class="center">
+            <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/worcestertn" data-widget-id="712739186692984832">Tweets by @worcestertn</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
           </div>
         </div>
 
     </div>
-    <br><br>
 
     </div>
   </div>

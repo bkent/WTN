@@ -24,58 +24,40 @@
   <?php include "headerfooter.php"; ?>
 </head>
 <body>
-  <?php ShowHeader("contact"); ?>
+  <?php ShowHeader("volunteer"); ?>
 
   <div class="container">
     <div class="section">
-      <?php
-          include "dbfuncs.php";
-          $q = $_GET["q"];
-          $t = $_GET["t"];
-          $a = $_GET["a"];
-          if (isset($_GET["q"]))
-          {
-            $msg = "Request to borrow talking book, Catalogue No: $q ($t, by $a)";
-          }
-          else
-          {
-            $msg= "";
-          }
-      ?>
 
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m12">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">hearing</i></h2>
-            <h5 class="center">Contact</h5>
-            <form  method='post' action='sendmail.php'>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" name="email" class="validate">
-                  <label for="email">Email</label>
-                </div>
+            <div class="row">
+              <div class="col s12 m6">
+                <img class="responsive-img" src="img/DSCF4498.JPG">
+                <br/>
+                <img class="responsive-img" src="img/DSCF4652.JPG">
               </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea id="textarea1" name="message" class="materialize-textarea"><?php echo "$msg"; ?></textarea>
-                  <label for="textarea1">Message</label>
-                </div>
+              <div class="col s12 m6">
+                <h5>Volunteer</h5>
+                <p class="light">Worcester Talking News is a charity that relies entirely on volunteers, especially for administration, editing, reading and technical.</p>
+                <p class="light">All essential training and equipment are provided completely FREE.</p>
+                <p class="light">We just need YOU and your spare time....</p>
+                <p class="light">If you can help, then please <a href="contact.html">contact us</a>.</p>
               </div>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                <i class="material-icons right">send</i>
-              </button>
-            </form>
+            </div>
           </div>
         </div>
 
     </div>
-    <br><br>
-
+    <br/><br/>
     </div>
   </div>
 
   <?php ShowFooter(); ?>
+
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
