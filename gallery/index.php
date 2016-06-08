@@ -42,7 +42,7 @@
 	## setting: include header/footer ##
 	## set to TRUE to embed the add_header.php and/or add_footer.php files
 	$include_header = false;
-	$include_footer = false;
+	$include_footer = true;
 	
 	
 	#### DO NOT CHANGE FROM HERE ####################################
@@ -272,6 +272,7 @@
 		if ($include_footer
 			&& file_exists("add_footer.php")) {
 			include("add_footer.php");
+			
 		}
 	?>
 	

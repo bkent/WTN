@@ -1,7 +1,7 @@
-<div id="gallery_footer_container">
+<div id="gallery_footer_container" style="text-align:center;">
 <!-- #### START FOOTER CONTENT #### -->
 	
-	<p>MINISHOWCASE FOOTER</p>
+  <p><a href="http://worcestertalkingnews.org.uk">Back to main site</a></p>
 	
 <!-- #### END FOOTER CONTENT #### -->
 </div>
