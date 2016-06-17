@@ -52,13 +52,13 @@
             <form  method='post' action='sendmail.php'>
               <div class="row">
                 <div class="input-field col s12">
-                  <input id="email" type="email" name="email" class="validate">
+                  <input id="email" type="email" name="email" class="validate" required="" aria-required="true">
                   <label for="email">Email</label>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <textarea id="textarea1" name="message" class="materialize-textarea"><?php echo "$msg"; ?></textarea>
+                  <textarea id="textarea1" name="message" class="materialize-textarea" required="" aria-required="true"><?php echo "$msg"; ?></textarea>
                   <label for="textarea1">Message</label>
                 </div>
               </div>
