@@ -34,7 +34,7 @@
         <h5 class="header col s12 light">Bringing local news to visually impaired listeners</h5>
       </div>
       <div class="row center">
-        <a href="listen.html" id="download-button" class="btn-large waves-effect waves-light orange">Listen Now</a>
+        <a href="listen.php" id="download-button" class="btn-large waves-effect waves-light orange">Listen Now</a>
       </div>
       <br><br>
 
