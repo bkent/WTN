@@ -47,7 +47,8 @@
                 </div> -->            
               </div>
               <div class="col s12 m6">
-                <img class="responsive-img" src="img/DSCF4495.JPG">
+                <!-- <img class="responsive-img" src="img/DSCF4495.JPG"> -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/R16dBhzMm_M" frameborder="0" allowfullscreen></iframe>
                 <br/>
                 <img class="responsive-img" src="img/DSCF5259.JPG">
               </div>  
