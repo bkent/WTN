@@ -34,7 +34,7 @@
  */
 
 	## error reporting ##
-	error_reporting(E_ALL);
+	//error_reporting(E_ALL);
  	
 	## setting: debug flag ##
 	//$debug_main_flag = true; // NOT IN USE
