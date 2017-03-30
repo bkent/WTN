@@ -61,7 +61,7 @@
           //$num_rows = $stmt->num_rows;
                    
           //This is the number of results displayed per page
-          $page_rows = 50;
+          $page_rows = 5;
           
           //This tells us the page number of our last page 
           $last = ceil($num_rows/$page_rows);
