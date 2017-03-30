@@ -31,5 +31,5 @@
 		$stmt->bindValue(':q5', $url, PDO::PARAM_STR);
 	$stmt->execute();
 	
-	header("Location: listennew.php");
+	header("Location: listen.php");
 ?>
