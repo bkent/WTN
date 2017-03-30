@@ -53,6 +53,8 @@
           $stmt = $db->prepare($qdata);
           $stmt->execute();
           $num_rows = $stmt->rowCount(); 
+          
+          $total_num_rows = $num_rows;
                              
           //$data = $mysqli->query($qdata); 
           
@@ -210,7 +212,7 @@
               echo "<div class='row'>";
               echo "<div class='center col s6'>Page $pagenum of $last &nbsp;</div>";
               	
-            	echo "<div class='center col s6'>$num_rows $results</div>"; 
+            	echo "<div class='center col s6'>$total_num_rows $results</div>"; 
               echo "</div>";
             }
         ?>
