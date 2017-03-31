@@ -210,6 +210,12 @@
               	
             	echo "<div class='center col s6'>$total_num_rows $results</div>"; 
               echo "</div>";
+              
+              echo "<div class='row yellow'>";
+              echo "<p>If you are unable to listen to the files, we recommend using <a href='https://www.google.com/chrome/browser/desktop/index.html'>Google Chrome</a>. Otherwise you can download the mp3 files from 
+              <a href='https://archive.org/search.php?query=creator%3AWNESB&sort=-date'>here</a></p>";
+              echo "</div>";
+              
             }
         ?>
         </div>
