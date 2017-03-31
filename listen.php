@@ -35,7 +35,7 @@
         <?php
           include "dbfuncs.php";
 
-          $q = $_GET["q"];
+          //$q = $_GET["q"];
           $pagenum = $_GET["p"];
           
           if (!isset($_GET["p"]))
@@ -45,7 +45,7 @@
           
           $db = iConnect();
           
-          $q = "%$q%";
+          //$q = "%$q%";
           
           $qdata = "select * from episodes";
           $qdata .= " order by recordeddt desc";
@@ -66,7 +66,9 @@
           $page_rows = 5;
           
           //This tells us the page number of our last page 
-          $last = ceil($num_rows/$page_rows);
+          $last = ceil($total_num_rows/$page_rows);
+          
+          echo "last=$last";
                   
           //this makes sure the page number isn't below one, or more than our maximum pages 
           if ($pagenum < 1) 
@@ -171,7 +173,6 @@
               <button class='btn waves-effect waves-light $firstbuttonenabled' type='submit'>
                    <i class='material-icons center'>fast_rewind</i>
               </button>
-              <input type='hidden' name='q' value='$q' />
               <input type='hidden' name='p' value='1' /></form></div>";
               
               $previous = $pagenum-1;
@@ -180,7 +181,6 @@
               <button class='btn waves-effect waves-light $firstbuttonenabled' type='submit'>
                    <i class='material-icons center'>skip_previous</i>
               </button>
-              <input type='hidden' name='q' value='$q' />
               <input type='hidden' name='p' value='$previous' /></form></div>";
               
               //This does the same as above, only checking if we are on the last page, and then generating the Next and Last links
@@ -199,14 +199,12 @@
               <button class='btn waves-effect waves-light $lastbuttonenabled' type='submit'>
                     <i class='material-icons center'>skip_next</i>
               </button>
-              <input type='hidden' name='q' value='$q' />
               <input type='hidden' name='p' value='$next' /></form></div>";
               
-              echo " <div class='center col s3'><form name='formpagelast' id='formpagelast' method='post' action='listen.php'>
+              echo " <div class='center col s3'><form name='formpagelast' id='formpagelast' method='get' action='listen.php'>
               <button class='btn waves-effect waves-light $lastbuttonenabled' type='submit'>
                    <i class='material-icons center'>fast_forward</i>
               </button>
-              <input type='hidden' name='q' value='$q' />
               <input type='hidden' name='p' value='$last' /></form></div>";
               echo "</div>";
               echo "<div class='row'>";

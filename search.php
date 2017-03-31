@@ -212,7 +212,7 @@
               <input type='hidden' name='q' value='$q' />
               <input type='hidden' name='p' value='$next' /></form></div>";
               
-              echo " <div class='center col s3'><form name='formpagelast' id='formpagelast' method='post' action='search.php'>
+              echo " <div class='center col s3'><form name='formpagelast' id='formpagelast' method='get' action='search.php'>
               <button class='btn waves-effect waves-light $lastbuttonenabled' type='submit'>
                    <i class='material-icons center'>fast_forward</i>
               </button>

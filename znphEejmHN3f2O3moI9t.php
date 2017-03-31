@@ -13,7 +13,7 @@
     <p>Description</p>
     <textarea name="descr" id="descr" rows="10" cols="100" ></textarea>
     <p>Archive URL</p>
-    <input type="text" name="url" id="url" style="width: 600px;" />
+    <input type="text" name="url" id="url" style="width: 600px;" value="https://archive.org/details/" />
     <input type="submit" value="Enter" />
   </form>                   
   </body>
