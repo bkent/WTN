@@ -67,9 +67,7 @@
           
           //This tells us the page number of our last page 
           $last = ceil($total_num_rows/$page_rows);
-          
-          echo "last=$last";
-                  
+                            
           //this makes sure the page number isn't below one, or more than our maximum pages 
           if ($pagenum < 1) 
           { 
