@@ -17,19 +17,31 @@
 	$recordeddate = $_POST['recordeddate'];
 	$descr = $_POST['descr'];
 	$url = $_POST['url'];
+	$titletoupdate = $_POST['titletoupdate']; 
 	
 	include "dbfuncs.php";      
           
     $connect = iConnect();
 	
-	$stmt = $connect->prepare("INSERT INTO episodes (title,type,recordeddt,
-		synopsis,url) VALUES (:q1,:q2,:q3,:q4,:q5)");
-		$stmt->bindValue(':q1', $title, PDO::PARAM_STR);
-		$stmt->bindValue(':q2', $type, PDO::PARAM_STR);
-		$stmt->bindValue(':q3', $recordeddate, PDO::PARAM_STR);
-		$stmt->bindValue(':q4', $descr, PDO::PARAM_STR);
-		$stmt->bindValue(':q5', $url, PDO::PARAM_STR);
-	$stmt->execute();
+	if ($titletoupdate == "Please_Select")
+	{
+		$stmt = $connect->prepare("INSERT INTO episodes (title,type,recordeddt,
+			synopsis,url) VALUES (:q1,:q2,:q3,:q4,:q5)");
+			$stmt->bindValue(':q1', $title, PDO::PARAM_STR);
+			$stmt->bindValue(':q2', $type, PDO::PARAM_STR);
+			$stmt->bindValue(':q3', $recordeddate, PDO::PARAM_STR);
+			$stmt->bindValue(':q4', $descr, PDO::PARAM_STR);
+			$stmt->bindValue(':q5', $url, PDO::PARAM_STR);
+		$stmt->execute();
+	}
+	else
+	{
+		$stmt = $connect->prepare("UPDATE episodes SET url=:q1
+			WHERE title=:q2");
+			$stmt->bindValue(':q1', $url, PDO::PARAM_STR);
+			$stmt->bindValue(':q2', $titletoupdate, PDO::PARAM_STR);
+		$stmt->execute();
+	}
 	
 	header("Location: listen.php");
 ?>

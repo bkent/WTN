@@ -136,7 +136,8 @@
               echo "<tr>";
               echo "  <td>" . $title . "</td>";
               echo "  <td>" . $synopsis . "</td>";
-              echo "  <td><div class='center col s3'><form action='" . $url . "'>
+              echo "  <td><div class='center col' style='font-size: 10px;'><b><p>CLICK TO PLAY:</p></b></div>
+              <div class='center col s3'><form action='" . $url . "'>
               <button class='btn waves-effect waves-light " . $colour . " $playenabled' type='submit'>
                     <i class='material-icons center'>play_arrow</i>
               </button>

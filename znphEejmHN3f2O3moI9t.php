@@ -15,6 +15,27 @@
     <p>Archive URL</p>
     <input type="text" name="url" id="url" style="width: 600px;" value="https://archive.org/details/" />
     <input type="submit" value="Enter" />
+    <br/><br/>
+    <?php
+      include "dbfuncs.php";
+      $db = iConnect();
+          
+      $qdata = "select * from episodes";
+      $qdata .= " where url = ''";
+      $qdata .= " order by recordeddt desc";
+      
+      $stmt = $db->prepare($qdata);
+      $stmt->execute();
+      
+      echo '<select name="titletoupdate" id="titletoupdate">
+        <option value="Please_Select">Please_Select</option>';
+      while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+    	{
+    		$title = $row['title'];
+        echo '<option value="' . $title . '">' . $title . '</option>';
+      }
+      echo '</select>';
+   ?>
   </form>                   
   </body>
 </html>
