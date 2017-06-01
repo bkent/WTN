@@ -40,7 +40,7 @@ function ShowHeader($active)
         break;	
 	}
 		
-	echo '<nav class="yellow accent-2" role="navigation">
+	echo '<div class="navbar-fixed"><nav class="yellow accent-2" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="'. $dotdotslash .'index.php" class="brand-logo"><img src="'. $dotdotslash .'img/wtn_logo.png" height="55px" /></a>
       <ul class="right hide-on-med-and-down">
         <li '. $index .'><a href="'. $dotdotslash .'index.php">Home</a></li>
@@ -67,7 +67,7 @@ function ShowHeader($active)
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-   </nav>';
+   </nav></div>';
 }
 
 function ShowFooter() 
